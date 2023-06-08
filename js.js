@@ -4,10 +4,14 @@ const nav = document.querySelector(".thenav");
 let lastScrollY = window.scrollY;
 
 window.addEventListener('scroll', () => {
-    if (lastScrollY < window.scrollY) {
-        nav.classList.add("nav--hidden")
-       
-
+    
+    if (window.scrollY <= 500) {
+        nav.classList.add("bring-it")
+    }
+    
+    else if (lastScrollY < window.scrollY) {
+            nav.classList.add("nav--hidden")
+     
     } else {
       nav.classList.remove("nav--hidden"),
       nav.classList.remove("bring-it")
